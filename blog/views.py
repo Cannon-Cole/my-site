@@ -1,11 +1,10 @@
 from django.http import HttpResponse
 from django.shortcuts import render
-from django.urls import path, include
 # Create your views here.
 
 
 def starting_page(request):
-    return HttpResponse("featured")
+    return render(request, "blog/index.html")
 
 
 def posts(request):
