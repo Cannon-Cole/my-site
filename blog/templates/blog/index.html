@@ -20,7 +20,7 @@ My Blog
 
 <section id="welcome">
     <header>
-        <img src="" alt="Author"/>
+        <img src={% static 'blog/images/person_placeholder.jpg'%} alt="Author"/>
         <h2>Cole's Blog</h2>
     </header>
     <p>I am a software and indie game developer!</p>
@@ -28,12 +28,11 @@ My Blog
 
 <section id="latest-posts">
     <h2>What's Going On?</h2>
-
     <ul>
         <li>
             <article class="post">
                 <a href="">
-                    <img src="" alt="Mountain Hiking"/>
+                    <img src={% static 'blog/images/mountains.jpg'%} alt="Mountain Hiking"/>
                     <div class="post__content">
                         <h3>Mountain Hiking</h3>
                         <p>Hiking is great exercise and time for meditation.</p>
