@@ -6,8 +6,8 @@ My Blog
 {% endblock %}
 
 {% block css_files %}
-<link rel="stylesheet" href="{% static 'blog/index.css' %}"/>
-<link rel="stylesheet" href="{% static 'blog/post.css' %}"/>
+<link rel="stylesheet" href="{% static 'blog/css/post.css' %}"/>
+<link rel="stylesheet" href="{% static 'blog/css/index.css' %}"/>
 {% endblock %}
 
 {% block content %}
@@ -22,17 +22,7 @@ My Blog
 <section id="latest-posts">
     <h2>What's Going On?</h2>
     <ul>
-        <li>
-            <article class="post">
-                <a href="">
-                    <img src={% static "blog/images/mountains.jpg"%} alt="Mountain Hiking"/>
-                    <div class="post__content">
-                        <h3>Mountain Hiking</h3>
-                        <p>Hiking is great exercise and time for meditation.</p>
-                    </div>
-                </a>
-            </article>
-        </li>
+        {% include "blog/includes/post.html" %}
     </ul>
 </section>
 
