@@ -2,11 +2,11 @@
 
 <li>
     <article class="post">
-        <a href={% url 'specific-post' 'the-mountains' %}>
-            <img src={% static "blog/images/mountains.jpg"%} alt="Mountain Hiking"/>
+        <a href={% url 'specific-post' post.slug %}>
+            <img src={% static "blog/images/"|add:post.image %} alt="{{post.title}}"/>
             <div class="post__content">
-                <h3>Mountain Hiking</h3>
-                <p>Hiking is great exercise and time for meditation.</p>
+                <h3>{{post.title}}</h3>
+                <p>{{post.excerpt}}</p>
             </div>
         </a>
     </article>
